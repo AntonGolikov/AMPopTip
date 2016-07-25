@@ -96,7 +96,6 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self setup];
 }
 
 - (void)setup {
@@ -287,6 +286,7 @@
         return;
     }
     self.isAnimating = YES;
+    [self setup];
     [self setNeedsLayout];
     [self performEntranceAnimation:^{
         [self.containerView addGestureRecognizer:self.tapRemoveGesture];
